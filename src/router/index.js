@@ -1,4 +1,3 @@
-// src/router/index.js
 import { createRouter, createWebHistory } from "vue-router";
 import MainPage from "../components/MainPage.vue";
 import BookPage from "../components/BookPage.vue";
@@ -29,7 +28,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHistory(),
   routes,
 });
 
