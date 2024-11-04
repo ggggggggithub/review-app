@@ -7,7 +7,6 @@
       </div>
     </header>
     <main>
-      <h2>리뷰 앱 메인 화면</h2>
       <nav>
         <router-link to="/books">책</router-link>
         <router-link to="/movies">영화</router-link>
