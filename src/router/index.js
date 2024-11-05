@@ -3,6 +3,7 @@ import MainPage from "../components/MainPage.vue";
 import BookPage from "../components/BookPage.vue";
 import MoviePage from "../components/MoviePage.vue";
 import DramaPage from "../components/DramaPage.vue";
+import LoginPage from "@/components/LoginPage.vue";
 
 const routes = [
   {
@@ -24,6 +25,11 @@ const routes = [
     path: "/dramas",
     name: "DramaPage",
     component: DramaPage,
+  },
+  {
+    path: "/login",
+    name: "LoginPage",
+    component: LoginPage,
   },
 ];
 
