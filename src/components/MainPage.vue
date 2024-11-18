@@ -7,10 +7,10 @@
       </div>
     </header>
     <main>
-      <nav>
-        <router-link to="/books">책</router-link>
-        <router-link to="/movies">영화</router-link>
-        <router-link to="/dramas">드라마</router-link>
+      <nav class="nav-container">
+        <router-link to="/books" class="nav-item">책</router-link>
+        <router-link to="/movies" class="nav-item">영화</router-link>
+        <router-link to="/dramas" class="nav-item">드라마</router-link>
       </nav>
     </main>
   </div>
@@ -36,8 +36,9 @@ body {
 }
 
 .header {
+  position: relative; /* 로그인 버튼을 절대 위치로 조정 */
   background-color: #28a745; /* 초록색 배경 */
-  text-align: center;
+  text-align: center; /* 제목을 중앙 정렬 */
   padding: 1rem;
 }
 
@@ -45,13 +46,13 @@ body {
   font-size: 2rem;
   font-weight: bold;
   color: white;
-  margin-bottom: 0.5rem;
 }
 
 .login-container {
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 1rem;
+  position: absolute; /* 부모 요소 기준으로 위치 설정 */
+  top: 50%; /* 세로 중앙 정렬 */
+  right: 1rem; /* 오른쪽 끝에 여백 */
+  transform: translateY(-50%); /* 세로 중앙 맞춤 */
 }
 
 .login-button {
@@ -64,5 +65,35 @@ body {
 
 .login-button:hover {
   background-color: #0056b3;
+}
+
+/* Nav 스타일 */
+.nav-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.nav-item {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0; /* 회색 배경 */
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.nav-item:hover {
+  background-color: #dcdcdc; /* 밝은 회색 */
+  transform: scale(1.1);
 }
 </style>
