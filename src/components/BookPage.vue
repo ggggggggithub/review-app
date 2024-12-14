@@ -39,7 +39,7 @@ export default {
     };
 
     onMounted(() => {
-      fetchBooks(); // 컴포넌트가 마운트될 때 데이터 가져오기
+      fetchBooks();
     });
 
     return {
